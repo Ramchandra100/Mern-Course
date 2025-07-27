@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .outer-container{
+        margin: 200px auto;
+        height: 500px;
+        width: 500px;
+        background-color: aquamarine;
+    }
+    .inner-container{
+        height: 200px;
+        width: 200px;
+        background-color: blue;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 2s ease-in-out;
+    }
+    .inner-container:hover{
+        transform: translate(60%,60%) rotate(360deg) scale(1) skew(10deg);
+        border-radius: 50%;
+    }
+    .list{
+        display: flex;
+        list-style: none;        
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .items{
+        font-size: 1.5rem;
+        font-weight: 800;
+        transition: 0.2s ease-in;
+        padding: 10px;
+    }
+    .items:hover{
+        background-color: black;
+        color: white;
+        transform: translateY(-10px);
+    }
+</style>
+<body>
+    <ul class="list">
+        <li class="items">Item1</li>
+        <li class="items">Item2</li>
+        <li class="items">Item3</li>
+        <li class="items">Item4</li>
+        <li class="items">Item5</li>
+    </ul>
+    <div class="outer-container">
+        <div class="inner-container"><h3>Hello</h3></div>
+    </div>
+</body>
+</html>
