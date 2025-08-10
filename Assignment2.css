@@ -32,9 +32,12 @@ body{
 .heroSection{
     margin-top: 3rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 100px;
+}
+.heroSection .left{
+    flex-basis: 40%;
 }
 .heroSection h1{
     font-size: 4rem;
@@ -48,7 +51,7 @@ body{
 }
 .heroSection button{
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border-radius: 1rem;
     background-color: rgb(48, 130, 236);
     color: white;
@@ -56,4 +59,26 @@ body{
 }
 .heroSection button:hover{
     background-color: rgb(110, 110, 197);
+}
+@media (max-width:500px) {
+    .heroSection{
+        flex-direction: column;
+        height: 100vh;
+        padding: 50px;
+        justify-content: start;
+        gap: 20px;
+        
+    }
+    *{
+        font-size: 0.4rem;
+    }
+    .heroSection h1 span,.heroSection h1{
+        font-size: 3rem;
+    }
+    .heroSection .left,.heroSection .right{
+        flex-basis: auto;
+    }
+    .heroSection img{
+        height: 300px;
+    }
 }
