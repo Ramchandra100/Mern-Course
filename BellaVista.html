@@ -1,66 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bella Vista - Awsome Restaurant</title>
 </head>
 <style>
-*{
-    margin:0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 auto;
-}
-.header{
-    background-color: #081b4f;
-    color: white;
-    padding: 1rem 0;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-}
-.logo h1{
-    font-weight: 700;
-    font-family: cursive;
-}
-.logo .tagline{
-    opacity: 50%;
-}
-.navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.nav-links ul{
-    display: flex;
-    gap: 5rem;
-    justify-items: center;
-    
-}
-.nav-links a{
-    color: white;
-    text-decoration: none;
-}
-.nav-links li{
-    list-style: none;
-    padding: 1rem;
-    transition: 0.5s ease;
-}
-.nav-links li:hover{
-    background-color: lightslategrey;
-    border-radius: 30%;
-}
+    * {
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0 auto;
+    }
+
+    .header {
+        background-color: #081b4f;
+        color: white;
+        padding: 1rem 0;
+        position: fixed;
+        z-index: 100;
+        width: 100%;
+    }
+
+    .logo h1 {
+        font-weight: 700;
+        font-family: cursive;
+    }
+
+    .logo .tagline {
+        opacity: 50%;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links ul {
+        display: flex;
+        gap: 5rem;
+        justify-items: center;
+
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-links li {
+        list-style: none;
+        padding: 1rem;
+        transition: 0.5s ease;
+    }
+
+    .nav-links li:hover {
+        background-color: lightslategrey;
+        border-radius: 30%;
+    }
+
+    .hero {
+        height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.pinimg.com/originals/b2/95/d3/b295d35f725dc1214b09cb2cdf63c74c.jpg') center/cover;
+        padding-top: 80px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-content h2 {
+        font-size: 3rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin-bottom: 1rem;
+    }
+
+    .btns {
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        cursor: pointer;
+        align-items: center;
+    }
+
+    .primary-btn {
+        padding: 1rem;
+        background-color: #ed7b09;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+    }
+
+    .primary-btn:hover {
+        background-color: #7d440a;
+    }
+
+    .secondary-btn {
+        background-color: transparent;
+        border: 2px solid white;
+        border-radius: 10px;
+        transition: all 0.5s ease-in-out;
+        padding: 1rem;
+    }
+
+    .secondary-btn:hover {
+        background-color: white;
+        color: #081b4f;
+    }
+    .menu>.container{
+        padding: 2rem 0;
+    }
+    .menu>.container>h2{
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+    .menu>.container>p{
+        text-align: center;
+        font-size: 1.5;
+    }
+    .menu-category h3{
+        font-size: 2rem;
+        font-weight:bold;
+        border-bottom: 3px solid red;
+        padding: 0.5rem 0;
+    }
+    .menu-items{
+        display: grid;
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+    .menu-item p{
+        font-size:1rem;
+    }
+    .menu-item >span{
+        font-size: larger;
+        font-weight: bolder;
+        color: rgb(255, 174, 0);
+    }
+    .menu-item{
+        font-size: larger;
+        padding: 1rem;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+        box-shadow: 5px 3px 5px rgba(0, 0, 0,0.5);
+    }
+    .menu-item:hover{
+        transform: translateY(-3px);
+    }
+    .about{
+        background-color: #a7aec042;
+        padding: 4rem 0;
+    }
+    .about-title h2{
+        font-size: 2.5rem;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 4rem;
+    }
+    .about-content{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        width: 100%;
+        align-items: center;
+    }
+    .about-img > img{
+        width: 100%;
+        border-radius: 50%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0,1);
+    }
+    .about-text> h3{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .about-text>p{
+        font-size: large;
+        margin: 0.5rem;
+    }
+
 </style>
+
 <body>
     <div class="header">
         <div class="container">
@@ -80,5 +226,76 @@ body{
             </div>
         </div>
     </div>
+    <div class="main">
+        <section class="hero" id="Home">
+            <div class="hero-content">
+                <h2>Welcome to Bella Vista</h2>
+                <p>This is the time to taste world famous coffee ever. In short you can say taste of Immortal liquid.
+                </p>
+                <div class="btns">
+                    <div class="primary-btn">Reserve Now</div>
+                    <div class="secondary-btn">Show Menu</div>
+                </div>
+            </div>
+        </section>
+        <section class="menu" id="Menu">
+            <div class="container">
+                <h2>Our Menu</h2>
+                <p>Get excited Time to taste the real thing.</p>
+                <div class="menu-categories">
+                    <div class="menu-category">
+                        <h3>Appetizer</h3>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4>Bruschetta Italina</h4>
+                                    <p>Fresh Tomatos, Brazil and mozilla chezz on roasted bread.</p>
+                                </div>
+                                <span class="price">$12</span>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4>Antipasto Platter</h4>
+                                    <p>Seletion of curds, chesses and totally fresh vegies</p>
+                                </div>
+                                <span class="price">$15</span>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4>Bruschetta Italina</h4>
+                                    <p>Fresh Tomatos, Brazil and mozilla chezz on roasted bread.</p>
+                                </div>
+                                <span class="price">$12</span>
+                            </div>
+                            <div class="menu-item">
+                                <div class="menu-item-info">
+                                    <h4>Bruschetta Italina</h4>
+                                    <p>Fresh Tomatos, Brazil and mozilla chezz on roasted bread.</p>
+                                </div>
+                                <span class="price">$12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="About">
+            <div class="container">
+                <div class="about-title">
+                    <h2>About BellaVista You Know</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <h3>Our Story</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Modi tempore assumenda, reiciendis quibusdam optio nobis corporis, beatae voluptas recusandae voluptate eveniet cupiditate iste suscipit nostrum dolores veritatis facere?
+                            Sapiente fugit nulla accusamus culpa molestias velit eius, molestiae facere perferendis quod error numquam. Omnis distinctio deleniti reprehenderit minus accusantium optio eius dolorum, harum quaerat, nostrum blanditiis minima, vitae atque.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quasi dolore alias qui nulla! Minima eligendi beatae ipsam animi ipsum est! Amet laborum delectus corporis reiciendis recusandae vitae, dolorem adipisci.</p>
+                        </div>
+                        <div class="about-img"><img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?cs=srgb&dl=pexels-pixabay-262978.jpg&fm=jpg" alt="our-story-image"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
