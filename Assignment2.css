@@ -4,9 +4,10 @@
     box-sizing: border-box;
 }
 body{
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    width: 100%;
+    min-height: 100vh; 
+    overflow-x: hidden; 
+    font-size: 16px; 
 }
 .navbar{
     margin: 20px;
@@ -15,6 +16,8 @@ body{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap; 
+    gap: 15px; 
 }
 .navbar ul li{
     list-style: none;
@@ -34,59 +37,72 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 100px;
+    padding: 50px; 
+    flex-wrap: wrap; 
 }
 .heroSection .left{
     flex-basis: 40%;
+    min-width: 300px; 
 }
 .heroSection h1{
-    font-size: 4rem;
+    font-size: 3rem; 
     color: rgb(65, 61, 61);
     padding-bottom: 1rem;
+    line-height: 1.2; 
 }
 .heroSection p{
-    font-size: 1.8rem;
+    font-size: 1.2rem; 
     color: gray;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem; 
+    line-height: 1.5;
 }
 .heroSection button{
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem; 
     border-radius: 1rem;
     background-color: rgb(48, 130, 236);
     color: white;
     font-weight: 600;
+    border: none;
+    cursor: pointer;
 }
 .heroSection button:hover{
     background-color: rgb(110, 110, 197);
 }
+
 @media (max-width:1024px) {
     .heroSection{
         flex-direction: column;
-        height: 100vh;
-        padding: 50px;
-        justify-content: start;
-        gap: 20px;
-        
+        min-height: auto; 
+        padding: 30px; 
+        gap: 40px;
     }
-    *{
-        font-size: 0.4rem;
+    
+    .heroSection h1, .heroSection h1 span {
+        font-size: 2rem; 
     }
-    .heroSection h1 span,.heroSection h1{
-        font-size: 3rem;
-    }
-    .heroSection .left,.heroSection .right{
-        flex-basis: auto;
+    .heroSection p {
+        font-size: 1rem;
     }
     .heroSection img{
-        height: 300px;
+        height: 250px; 
+        width: auto;
     }
     .navbar img{
         width: 40px;
     }
-    .navbar ul li:last-child{
-    font-size: 1.2rem;
-    padding: 10px;
-    font-weight: 800;
+    .navbar ul li, 
+    .navbar ul li:last-child {
+        font-size: 1rem; 
+        padding: 8px;
+    }
 }
+
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 20px;
+    }
+    .heroSection h1, .heroSection h1 span {
+        font-size: 1.5rem;
+    }
 }
