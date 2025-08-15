@@ -7,6 +7,18 @@
     <title>Bella Vista - Awsome Restaurant</title>
 </head>
 <style>
+    :root {
+        --primary-color: #1A2A80;
+        --secondary-color: #3B38A0;
+        --light-bg: #B2B0E8;
+        --bg: #7A85C1;
+        --shadow: 0 4px 6px 8px rgba(0, 0, 0, 0.5);
+        --transtext: all 0.5s ease;
+        --text-g: #b9e6d3;
+        --text-b: #69e9f5;
+
+    }
+
     * {
         margin: 0%;
         padding: 0%;
@@ -26,7 +38,7 @@
     }
 
     .header {
-        background-color: #081b4f;
+        background-color: var(--primary-color);
         color: white;
         padding: 1rem 0;
         position: fixed;
@@ -81,6 +93,7 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        flex-wrap: wrap;
     }
 
     .hero-content h2 {
@@ -129,38 +142,46 @@
         background-color: white;
         color: #081b4f;
     }
-    .menu>.container{
+
+    .menu>.container {
         padding: 2rem 0;
     }
-    .menu>.container>h2{
+
+    .menu>.container>h2 {
         text-align: center;
         font-size: 2.5rem;
         font-weight: bold;
     }
-    .menu>.container>p{
+
+    .menu>.container>p {
         text-align: center;
         font-size: 1.5;
     }
-    .menu-category h3{
+
+    .menu-category h3 {
         font-size: 2rem;
-        font-weight:bold;
+        font-weight: bold;
         border-bottom: 3px solid red;
         padding: 0.5rem 0;
     }
-    .menu-items{
+
+    .menu-items {
         display: grid;
         gap: 1rem;
         margin: 2rem 0;
     }
-    .menu-item p{
-        font-size:1rem;
+
+    .menu-item p {
+        font-size: 1rem;
     }
-    .menu-item >span{
+
+    .menu-item>span {
         font-size: larger;
         font-weight: bolder;
         color: rgb(255, 174, 0);
     }
-    .menu-item{
+
+    .menu-item {
         font-size: larger;
         padding: 1rem;
         border: 2px solid rgba(0, 0, 0, 0.2);
@@ -169,42 +190,204 @@
         justify-content: space-between;
         align-items: flex-start;
         transition: all 0.3s ease;
-        box-shadow: 5px 3px 5px rgba(0, 0, 0,0.5);
+        box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
     }
-    .menu-item:hover{
+
+    .menu-item:hover {
         transform: translateY(-3px);
     }
-    .about{
+
+    .about {
         background-color: #a7aec042;
         padding: 4rem 0;
     }
-    .about-title h2{
+
+    .about-title h2 {
         font-size: 2.5rem;
         text-align: center;
         font-weight: bold;
         margin-bottom: 4rem;
     }
-    .about-content{
+
+    .about-content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
         width: 100%;
         align-items: center;
     }
-    .about-img > img{
+
+    .about-img>img {
         width: 100%;
         border-radius: 50%;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0,1);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
     }
-    .about-text> h3{
+
+    .about-text>h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
-    .about-text>p{
+
+    .about-text>p {
         font-size: large;
         margin: 0.5rem;
     }
 
+    .contact {
+        padding: 4rem 0;
+        background-color: #b2b6c0;
+    }
+
+    .contact-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .contact-item {
+        display: block;
+        margin-bottom: 0.75rem;
+        font-size: 1.2rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-weight: 550;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 0.50rem;
+        font-size: 1rem;
+        border: solid 1px #ddd;
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        transition: border 1s ease;
+        box-shadow: 0px 4px 4px rgb(149, 140, 140);
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        border: 1px solid rgb(131, 160, 226);
+    }
+
+    form button {
+        padding: 0.75rem;
+        background-color: #ed7b09;
+        border-radius: 10px;
+        border: 1px;
+        box-shadow: 4px 5px 6px lightgray;
+        transition: all 0.5s ease-in;
+        cursor: pointer;
+    }
+
+    form button:hover {
+        background-color: #7d440a;
+        color: white;
+        transform: translateY(-2px);
+        font-weight: bold;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes fadeLeftRight {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+
+    .hero-content {
+        animation: fadeInUp 3s ease-out;
+    }
+
+    .menu-item.animate {
+        animation: fadeLeftRight 2s ease-in-out;
+    }
+    .footer{
+        padding: 3rem 0;
+        background-color: var(--secondary-color);
+        color: #fff;
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+        gap: 2rem;
+    }
+    .footer h4{
+        font-weight: bolder;
+        font-size: 1.5rem;
+        color: var(--text-g);
+    }
+    .footer a{
+        text-decoration: none;
+        font-size: 1rem;
+        color: #fff;
+    }
+    .footer ul li, .footer ul li a{
+        list-style-type: none;
+        color: gray;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+    .footer-bottom{
+        text-align: center;
+    }
+    .footer-link{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .footer hr{
+        margin: 1rem 0;
+    }
+    @media (max-width:768px) {
+        .navbar{
+            flex-direction: column;
+        }
+        .nav-links ul{
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .contact-content{
+            grid-template-columns: 1fr;
+        }
+        
+    }
 </style>
 
 <body>
@@ -286,12 +469,125 @@
                     <div class="about-content">
                         <div class="about-text">
                             <h3>Our Story</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, veniam! Modi tempore assumenda, reiciendis quibusdam optio nobis corporis, beatae voluptas recusandae voluptate eveniet cupiditate iste suscipit nostrum dolores veritatis facere?
-                            Sapiente fugit nulla accusamus culpa molestias velit eius, molestiae facere perferendis quod error numquam. Omnis distinctio deleniti reprehenderit minus accusantium optio eius dolorum, harum quaerat, nostrum blanditiis minima, vitae atque.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quasi dolore alias qui nulla! Minima eligendi beatae ipsam animi ipsum est! Amet laborum delectus corporis reiciendis recusandae vitae, dolorem adipisci.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+                                consectetur, adipisicing elit. Minus, veniam! Modi tempore assumenda, reiciendis
+                                quibusdam optio nobis corporis, beatae voluptas recusandae voluptate eveniet cupiditate
+                                iste suscipit nostrum dolores veritatis facere?
+                                Sapiente fugit nulla accusamus culpa molestias velit eius, molestiae facere perferendis
+                                quod error numquam. Omnis distinctio deleniti reprehenderit minus accusantium optio eius
+                                dolorum, harum quaerat, nostrum blanditiis minima, vitae atque.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quasi dolore alias qui
+                                nulla! Minima eligendi beatae ipsam animi ipsum est! Amet laborum delectus corporis
+                                reiciendis recusandae vitae, dolorem adipisci.</p>
                         </div>
-                        <div class="about-img"><img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?cs=srgb&dl=pexels-pixabay-262978.jpg&fm=jpg" alt="our-story-image"></div>
+                        <div class="about-img"><img
+                                src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?cs=srgb&dl=pexels-pixabay-262978.jpg&fm=jpg"
+                                alt="our-story-image"></div>
                     </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact" id="Contact">
+            <div class="container">
+                <h2 class="contact-title">Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Get Touch</h3>
+                        <div class="contact-item">
+                            <strong>Address</strong>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Phone</strong>
+                            <p>4512789632</p>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email Address</strong>
+                            <p>Lorem@gmail.com </p>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Get Your Reservation</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <label for="name">Full Name : </label>
+                                <input type="text" name="name" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email : </label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone : </label>
+                                <input type="tel" name="phone" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date of Reservation : </label>
+                                <input type="date" name="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time : </label>
+                                <select name="time" id="time" required>
+                                    <option value="">Select Time</option>
+                                    <option value="18:00">6:00 PM</option>
+                                    <option value="19:00">7:00 PM</option>
+                                    <option value="20:00">8:00 PM</option>
+                                    <option value="21:00">9:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Number of Guests : </label>
+                                <select name="guests" id="guests" required>
+                                    <option value="">Select Guests</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guest</option>
+                                    <option value="3">3 Guest</option>
+                                    <option value="4">4+ Guests</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message : </label>
+                                <textarea name="message" id="message" required></textarea>
+                            </div>
+                            <button type="submit">Submit Reservation</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="footer" id="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>Bella Vista</h4>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut, dolore.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#Home">Home</a></li>
+                            <li><a href="#Menu">Menu</a></li>
+                            <li><a href="#About">About</a></li>
+                            <li><a href="#Contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Opening Hours</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Follow</h4>
+                        <div class="footer-links">
+                            <a href="#">Youtube</a><a href="#">Instagram</a><a href="">Facebook</a>
+                        </div>
+                    </div>
+
+                </div>
+                <hr>
+                <div class="footer-bottom">
+                    &copy; Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, asperiores!
                 </div>
             </div>
         </section>
