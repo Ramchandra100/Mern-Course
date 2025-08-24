@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRESHO – Laundry Services</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    /* CSS RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem 2.5vw;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.logo {
+  height: 40px;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #0066ff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #0066ff;
+}
+
+.nav-right .user {
+  font-weight: 600;
+  color: #0066ff;
+}
+
+/* ===== HERO ===== */
+.hero {
+  flex: 1;
+  display: flex;
+  height: 100%;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5vw;
+}
+
+.hero-left {
+  gap: 1.5rem;
+}
+
+.hero-left h1 {
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero-left p {
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  color: #555;
+  max-width: 500px;
+}
+
+.cta {
+  align-self: flex-start;
+  padding: 0.9rem 2.2rem;
+  background: #0066ff;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta:hover {
+  background: #004fd4;
+}
+
+.hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 0 60px;
+}
+
+/* ===== RESPONSIVE TWEAKS ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-right img {
+    border-radius: 0;
+  }
+}
+  </style>
+</head>
+<body>
+  <!-- =========== NAVBAR =========== -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://i.imgur.com/X7XcUoK.png" alt="Fresho Logo" class="logo" />
+      <span class="brand">Fresho</span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About&nbsp;Us</a></li>
+      <li><a href="#contact">Contact&nbsp;Us</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <span class="user">Hi, Alex</span>
+    </div>
+  </nav>
+
+  <!-- =========== HERO =========== -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Revitalize Your Clothes with Expert Laundry Services!</h1>
+      <p>
+        From premium dry cleaning to swift wash and fold, we deliver care and
+        convenience. Schedule a pickup and rediscover the freshness of your
+        clothes today!
+      </p>
+      <a href="#book" class="cta">Book a Service Today!</a>
+    </div>
+
+    <div class="hero-right">
+      <img src="https://images.unsplash.com/photo-1522771730-d5d029a4a321?auto=format&fit=crop&w=1350&q=80" alt="Laundry Service" />
+    </div>
+  </section>
+</body>
+</html>

@@ -3,106 +3,102 @@
     padding: 0%;
     box-sizing: border-box;
 }
-body{
-    width: 100%;
-    min-height: 100vh; 
-    overflow-x: hidden; 
-    font-size: 16px; 
-}
-.navbar{
-    margin: 20px;
-}
-.navbar ul{
+.navbar {
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap; 
-    gap: 15px; 
+    justify-content: space-between;
+    padding: .5rem 2rem;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.navbar ul li{
+.navbar img {
+    height: 40px;
+    width: 40px;
+}
+.nav-links ul {
+    display: flex;
+    gap: 2rem;
+}
+.nav-links li {
     list-style: none;
-    font-size: 1.2rem;
-    color: gray;
 }
-.navbar ul li:last-child{
-    font-size: 1.5rem;
-    background-color: lightblue;
-    padding: 15px;
-    border-radius: 10px;
-    font-weight: 800;
-    color: blue;
-}
-.heroSection{
-    margin-top: 3rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 50px; 
-    flex-wrap: wrap; 
-}
-.heroSection .left{
-    flex-basis: 40%;
-    min-width: 300px; 
-}
-.heroSection h1{
-    font-size: 3rem; 
-    color: rgb(65, 61, 61);
-    padding-bottom: 1rem;
-    line-height: 1.2; 
-}
-.heroSection p{
-    font-size: 1.2rem; 
-    color: gray;
-    padding-bottom: 2rem; 
-    line-height: 1.5;
-}
-.heroSection button{
-    padding: 1rem;
-    font-size: 1.2rem; 
-    border-radius: 1rem;
-    background-color: rgb(48, 130, 236);
-    color: white;
-    font-weight: 600;
-    border: none;
-    cursor: pointer;
-}
-.heroSection button:hover{
-    background-color: rgb(110, 110, 197);
-}
+.user-info{
+        background-color: #555;
+        color: white;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+    }
 
-@media (max-width:1024px) {
-    .heroSection{
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #ffffff;
+
+}
+.hero .left {
+    flex: 1;
+    padding: 2rem;
+}
+.hero .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgb(0, 47, 255);
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+.left button {
+    background-color: rgb(0, 47, 255);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}   
+
+@media (max-width: 768px) {
+    .hero {
         flex-direction: column;
-        min-height: auto; 
-        padding: 30px; 
-        gap: 40px;
+        text-align: center;
     }
-    
-    .heroSection h1, .heroSection h1 span {
-        font-size: 2rem; 
+    .hero .left, .hero .right {
+        flex: 100%;
+        padding: 1rem 0;
     }
-    .heroSection p {
+    .nav-links ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: .5rem;
+    }
+}
+@media (max-width: 480px) {
+    .navbar{
+        padding: .5rem 1rem;
+        font-size: 0.8rem;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
         font-size: 1rem;
     }
-    .heroSection img{
-        height: 250px; 
-        width: auto;
-    }
-    .navbar img{
-        width: 40px;
-    }
-    .navbar ul li, 
-    .navbar ul li:last-child {
-        font-size: 1rem; 
-        padding: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .heroSection {
-        padding: 20px;
-    }
-    .heroSection h1, .heroSection h1 span {
-        font-size: 1.5rem;
+    .navbar img {
+        height: 30px;
+        width: 30px;
     }
 }
